@@ -25,7 +25,8 @@
             "group": "The interface",
             "pages": [
               "interface/search-tab",
-              "interface/media-tab"
+              "interface/media-tab",
+              "interface/settings-tab"
             ]
           },
               "report"
