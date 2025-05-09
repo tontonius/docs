@@ -21,10 +21,12 @@
             "pages": [
               "index",
               "quickstart",
-              "development",
               {
             "group": "The interface",
-            "pages": ["media-tab"]
+            "pages": [
+              "interface/search-tab",
+              "interface/media-tab"
+            ]
           },
               "report"
             ]
