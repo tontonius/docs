@@ -106,7 +106,7 @@
       "label": "Jumper website",
       "href": "https://getjumper.io"
     },
-    "secondary": {
+    "primary": {
       "type": "button",
       "label": "Buy a license",
       "href": "https://getjumper.io/#pricing"
