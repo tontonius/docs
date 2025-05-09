@@ -29,8 +29,7 @@
               "interface/settings-tab"
             ]
           },
-              "report",
-              "faq"
+              "report"
             ]
           },
           {
@@ -73,6 +72,11 @@
           "anchor": "Blog",
           "href": "https://getjumper.io/blog",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "Youtube",
+          "href": "https://getjumper.io/blog",
+          "icon": "youtube"
         }
       ]
     }
