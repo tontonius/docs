@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Jumper Docs",
   "colors": {
     "primary": "#8dacde",
     "light": "#8dacde",
@@ -29,7 +29,8 @@
               "interface/settings-tab"
             ]
           },
-              "report"
+              "report",
+              "faq"
             ]
           },
           {
@@ -69,14 +70,14 @@
           "icon": "discord"
         },
         {
+          "anchor": "Youtube",
+          "href": "https://www.youtube.com/channel/UCPaAO35CauOy3XOOUSZoSEw",
+          "icon": "youtube"
+        },
+        {
           "anchor": "Blog",
           "href": "https://getjumper.io/blog",
           "icon": "newspaper"
-        },
-        {
-          "anchor": "Youtube",
-          "href": "https://getjumper.io/blog",
-          "icon": "youtube"
         }
       ]
     }
@@ -102,6 +103,7 @@
     "socials": {
       "x": "https://x.com/mintlify",
       "discord": "https://discord.getjumper.io",
+      "youtube": "https://www.youtube.com/channel/UCPaAO35CauOy3XOOUSZoSEw",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
