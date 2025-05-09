@@ -75,7 +75,7 @@
         {
           "anchor": "Feature requests",
           "href": "https://jumper.canny.io/feature-requests",
-          "icon": "book-open-cover"
+          "icon": "lightbulb"
         },
         {
           "anchor": "Community",
@@ -105,11 +105,6 @@
       "type": "button",
       "label": "Jumper website",
       "href": "https://getjumper.io"
-    },
-    "primary": {
-      "type": "button",
-      "label": "Buy a license",
-      "href": "https://getjumper.io/#pricing"
     }
   },
   "footer": {
