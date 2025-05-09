@@ -30,6 +30,15 @@
             ]
           },
           {
+            "group": "Core concepts",
+            "pages": [
+              "core-concepts/processing",
+              "core-concepts/visual-search",
+              "core-concepts/speech-search"
+              
+            ]
+          },
+          {
             "group": "Essentials",
             "pages": [
               "essentials/markdown",
