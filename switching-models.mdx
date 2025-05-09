@@ -1,0 +1,15 @@
+---
+title: "Machine Learning Models"
+description: "Jumper uses powerful AI models to help you search through your videos visually. These models understand what's in your footage and let you find moments using natural language."
+---
+
+## Visual models
+
+## Speech models
+
+For transcriptions, Jumper uses **Whisper** models developed by OpenAI. Specifically, the `whisper-large-v3-turbo` variant is used. The choice of model depends on your platform:
+
+| **Platform**            | **Model Variant**      | **Size on Disk** | **Notes**                                                                                                                                                           |
+| :---------------------- | :--------------------- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Windows / Intel Mac** | whisper-large-v3-turbo | ~1.62GB          | Bundled with Windows and Intel Mac installers.                                                                                                                      |
+| **Apple M-series Macs** | whisper-large-v3-turbo | ~467MB           | Uses a quantized version converted to Apple's MLX framework for hardware acceleration (faster analysis, smaller model size). Bundled with Apple M-series installer. |
