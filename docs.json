@@ -22,6 +22,10 @@
               "index",
               "quickstart",
               "development",
+              {
+            "group": "The interface",
+            "pages": ["media-tab"]
+          },
               "report"
             ]
           },
