@@ -42,6 +42,12 @@
               "core-concepts/machine-learning"
               
             ]
+          },
+          {
+            "group": "Common issues",
+            "pages": [
+              "core-concepts/select-media-before"
+            ]
           }
         ]
       }
