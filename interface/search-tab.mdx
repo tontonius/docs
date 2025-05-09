@@ -3,37 +3,38 @@ title: "Search tab"
 description: "Learn about the Search tab in Jumper"
 ---
 
-![SCR-20250509-njfo-2.png](/images/SCR-20250509-njfo-2.png)
-
 ## Overview
 
-### 1. Search mode switch
+![SCR-20250509-njfo-2.png](/images/SCR-20250509-njfo-2.png)
 
-Switch between `Visual` and `Speech` search
+<Steps>
+  <Step title="Search mode switch">
+    Switch between `Visual` and `Speech` search
+  </Step>
+  <Step title="Main search box">
+    This is the main search box where you enter your search query.
+  </Step>
+  <Step title="Additional search methods">
+    There are a few additional methods of searching. The exact behavior of these depend on the parent NLE.
 
-### 2. Main search box
-
-This is the main search box where you enter your search query.
-
-### 3. Additional search methods
-
-There are a few additional methods of searching. The exact behavior of these depend on the parent NLE.
-
-<Tabs>
-  <Tab title="Premiere Pro">
-    <Card title="Match Source Monitor" horizontal>
-      Takes the frame currently visible in the Source Monitor and performs a search with it.
-    </Card>
-    <Card title="Match Source Monitor" horizontal>
-      Takes the frame currently visible in the Timeline Monitor and performs a search with it.
-    </Card>
-    <Card title="Match Source Monitor" horizontal>
-      Takes the image currently in your <Tooltip tip="">pasteboard</Tooltip> and performs a search with it.
-    </Card>
-  </Tab>
-</Tabs>
-
-### 4. Search outside project
+    <Tabs>
+      <Tab title="Premiere Pro">
+        <Card title="Match Source Monitor" horizontal>
+          Takes the frame currently visible in the Source Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Timeline Monitor" horizontal>
+          Takes the frame currently visible in the Timeline Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Pasteboard" horizontal>
+          Takes the image currently in your <Tooltip tip="">pasteboard</Tooltip> and performs a search with it.
+        </Card>
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Search outside project">
+    If switched on, Jumper will search in any analyzed media you have, even if its not in the currently open project.
+  </Step>
+</Steps>
 
 ## Search result view
 
