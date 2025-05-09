@@ -93,13 +93,18 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:hello@getjumper.io"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Jumper website",
       "href": "https://getjumper.io"
+    },
+    "secondary": {
+      "type": "button",
+      "label": "Buy a license",
+      "href": "https://getjumper.io/#pricing"
     }
   },
   "footer": {
