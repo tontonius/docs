@@ -4,7 +4,7 @@
   "name": "Mint Starter Kit",
   "colors": {
     "primary": "#bf8bdf",
-    "light": "#07C983",
+    "light": "#bf8bdf",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
@@ -64,8 +64,8 @@
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://discord.getjumper.io/",
+          "icon": "discord"
         },
         {
           "anchor": "Blog",
