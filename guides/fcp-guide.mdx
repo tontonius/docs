@@ -3,6 +3,10 @@ title: "Final Cut Pro Installation"
 description: "A step-by-step guide to installing Jumper for FCP"
 ---
 
+## Why do Jumper need these permissions?
+
+Due to technical limitations in FCP's native API, Jumper needs to use macOS's built-in Accessibility API to make things work. More information about why can be found at the bottom of this page
+
 ## Instructions
 
 <Steps>
@@ -10,7 +14,6 @@ description: "A step-by-step guide to installing Jumper for FCP"
     Open the `.dmg` file that has been downloaded from the website.
     ![install-01.png](/images/install-01.png)
 
-    
     Drag the `Jumper` application into your `Applications` folder.
     You can now launch `Jumper` by double clicking on it within your `Applications` folder.
   </Step>
@@ -144,3 +147,51 @@ description: "A step-by-step guide to installing Jumper for FCP"
     You can now assign it to whatever you want, save your Command Set, and now Jumper can use it\!
   </Step>
 </Steps>
+
+## Accessibility Permission
+
+Jumper requires Accessibility Permission to trigger commands and menu bar items in Final Cut Pro through macOS's built-in Accessibility Automation.
+
+This is only required for Final Cut Pro - it is not required if you're only using Adobe Premiere, DaVinci Resolve or Avid Media Composer.
+
+We use the Accessibility API to programatically "click" on buttons and menu bar items - similar to how Automator, Keyboard Maestro, BetterTouchTool, etc. works.
+
+## Screen Recording Permission
+
+Jumper requires the Screen Recording permission to detect things on your screen when using Final Cut Pro.
+
+This is only required for Final Cut Pro - it is not required if you're only using Adobe Premiere, DaVinci Resolve or Avid Media Composer.
+
+This is a new Security Setting that started in macOS Catalina.
+
+Jumper does not record the screen.
+
+We're not "recording" the screen as a video like a QuickTime Player or a screen recording application would do - we're simply using Apple's APIs to get access to information about the contents of the screen.
+
+We use Apple's API's to get the name of windows that are open.
+
+We also use the API's to help detect when Final Cut Pro is playing and paused, by "looking" at the play/pause button in the Viewer.
+
+Nothing is saved to disk. Nothing is transmitted online.
+
+We simply use Apple's APIs to access screen information.
+
+We also have the option of OPTIONALLY sending screenshots when you submit feedback.
+
+Lots of other applications like Bartender and BetterTouchTool have this same limitation.
+
+We use the same techniques as the totally open-source CommandPost, so you can always inspect their code to see what's going on.
+
+## Full Disk Access Permission
+
+Jumper requires Full Disk Access to read Final Cut Pro's Preferences File (~/Library/Preferences/com.apple.FinalCut.plist) and the current Final Cut Pro Command Set.
+
+This is only required for Final Cut Pro - it is not required if you're only using Adobe Premiere, DaVinci Resolve or Avid Media Composer.
+
+Due to macOS's very tight security in recent releases, we need explicit permission to read files inside the user's Library folder.
+
+We only use this permission to read Final Cut Pro preferences files.
+
+## Is Jumper compatible with CommandPost?
+
+Yes\! Although Jumper does have a specialised version of CommandPost running under the hood (we called it the Final Cut Pro Automation Engine in Jumper.app and Jumper Accessibility Helper in Activity Monitor), it's fully compatible with Jumper.
