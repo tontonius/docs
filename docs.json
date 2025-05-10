@@ -55,9 +55,10 @@
         "tab": "About",
         "groups": [
           {
-            "group": "About Jumper",
+            "group": "General",
             "pages": [
-              "about/press"
+              "about/press",
+              "about/affiliate"
             ]
           },
           {
