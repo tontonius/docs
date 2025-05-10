@@ -49,6 +49,42 @@
               "common-issues/select-media-before"
             ]
           }
+        ],
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "index",
+              "quickstart",
+              {
+            "group": "The interface",
+            "pages": [
+              "interface/search-tab",
+              "interface/media-tab",
+              "interface/settings-tab"
+            ]
+          },
+              "report",
+              "faq"
+            ]
+          },
+          {
+            "group": "Core concepts",
+            "pages": [
+              "core-concepts/processing",
+              "core-concepts/visual-search",
+              "core-concepts/speech-search",
+              "core-concepts/machine-learning"
+              
+            ]
+          },
+          {
+            "group": "Common issues",
+            "pages": [
+              "common-issues/select-media-before"
+            ]
+          }
         ]
       }
     ],
