@@ -57,18 +57,7 @@
           {
             "group": "About Jumper",
             "pages": [
-              "index",
-              "quickstart",
-              {
-            "group": "The interface",
-            "pages": [
-              "interface/search-tab",
-              "interface/media-tab",
-              "interface/settings-tab"
-            ]
-          },
-              "report",
-              "faq"
+              "press"
             ]
           },
           {
@@ -79,12 +68,6 @@
               "about/refund"
               
               
-            ]
-          },
-          {
-            "group": "Common issues",
-            "pages": [
-              "common-issues/select-media-before"
             ]
           }
         ]
