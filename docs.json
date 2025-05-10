@@ -10,7 +10,7 @@
   "appearance":{
     "default":"dark"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/favicon.png",
   "navigation": {
     "tabs": [
       {
