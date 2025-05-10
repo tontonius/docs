@@ -52,6 +52,13 @@
         ]
       },
       {
+        "tab": "Release notes",
+        
+            "pages": [
+              "release-notes"
+            ]
+      },
+      {
         "tab": "About",
         "groups": [
           {
