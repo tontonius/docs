@@ -58,6 +58,30 @@ This is where you enter your license key. After entering your key, click `Apply`
 
 ## Analysis folder
 
-Sets the location of where Analysis files will be stored. This can be any location on your machine or external drives. If you set it to a location on a networked drive, make sure you have the right priviledges to read/write to that location.
+Sets the location of where Analysis files will be stored. 
 
-You can browse and set a location by clicking the Folder `<Icon icon="folder" color="#ffffff" size={16} />` button
+You can browse and set a location by clicking the  <Icon icon="folder-open" iconType="duotone" size={16} /> Folder button.
+
+You can delete the entire contents of the Analysis by clicking the  <Icon icon="trash-can" iconType="duotone" />  Trash button.
+
+### Shared analysis folder
+
+The analysis folder can be any location on your machine or external drives. If you set it to a location on a networked drive, make sure you have the right priviledges to read/write to that location.
+
+### Sharing analysis files between users
+
+<Info>
+  This feature requires a Pro license
+</Info>
+
+Media already analyzed on one device will show up as analyzed (a green checkmark <Icon icon="circle-check" iconType="solid" color="#62b77f" /> in the [Media tab](/interface/media-tab) ) when imported into a project on another device.
+
+This means multiple Jumper users can analyze media to the same networked location and share the workload of analysis.
+
+### Swarm analysis
+
+<Info>
+  This feature requires a Pro license
+</Info>
+
+Utilize multiple computers to analyze your media in parallel, speeding up analysis time. When analyzing media to a shared location, Jumper will allocate and manage the concurrent analysis of media files between the devices. Pooling the compute resources can dramatically speed up the time to analyze media.
