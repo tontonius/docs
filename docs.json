@@ -50,10 +50,10 @@
             ]
           }
         ],
-        "tab": "Legal & Policies",
+        "tab": "About",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "About Jumper",
             "pages": [
               "index",
               "quickstart",
@@ -70,7 +70,7 @@
             ]
           },
           {
-            "group": "Core concepts",
+            "group": "Legal & Policies",
             "pages": [
               "core-concepts/processing",
               "core-concepts/visual-search",
