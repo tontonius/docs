@@ -7,15 +7,112 @@ sidebarTitle: "FAQ"
 ## General
 
 <AccordionGroup>
-  <Accordion title="How fast is the search?" >
+  <Accordion title="How fast is the search?">
     Fast.
 
-We’ve tested on a few different machines (MBP M1, Windows i5 laptop, 2019 Ryzen desktop) and all were able to search through roughly 100 hours of footage in about 0.2 seconds.
+    We’ve tested on a few different machines (MBP M1, Windows i5 laptop, 2019 Ryzen desktop) and all were able to search through roughly 100 hours of footage in about 0.2 seconds.
 
-We are also actively and constantly trying to improve performance.
+    We are also actively and constantly trying to improve performance.
   </Accordion>
-  <Accordion title="How long does the processing take?" >
+  <Accordion title="How long does the processing take?">
     It depends on your hardware setup and the resolution of the footage.
     A MacBook M1 Pro can process around 15 minutes of footage in 1 minute.
   </Accordion>
+  <Accordion title="How does Jumper handle multi-channel audio?">
+    Currently Jumper only processes audio from the first channel that has valid dialogue.
+
+In a future update, Jumper will process all audio channels.
+  </Accordion>
 </AccordionGroup>
+
+
+
+
+
+## Licensing & Account management
+
+<AccordionGroup>
+  <Accordion title="How do I use my license key on another computer?">
+    Use the email associated with your license key and go to [getjumper.io](https://getjumper.io/) and click the **Log in** button, and enter your email there.
+    A login link should be emailed to you shortly. Click it and you will be taken to the License Management portal at the website.
+
+    There you will see a red trashcan under the "Device fingerprint" for your license. Click the red trash can to sign out the currently active computer.
+    Now you can apply your license key on another computer.
+
+    ![sign-out-device.png](/images/sign-out-device.png)
+  </Accordion>
+  <Accordion title="How can I cancel my subscription?">
+    You can easily cancel your subscription by clicking **Log in** at the top of the main website [here](https://getjumper.io/account).
+  </Accordion>
+  <Accordion title="How can I change my payment method?">
+    You can easily change your subscription payment method by clicking **Log in** at the top of the main website [here](https://getjumper.io/account).
+  </Accordion>
+  <Accordion title="How can I get a refund?">
+    You can see our Refund Policy [here](/refund/).
+  </Accordion>
+</AccordionGroup>
+
+## Privacy & Data
+
+<AccordionGroup>
+  <Accordion title="Is any part of my footage uploaded during processing?">
+    No, we don’t upload the data processed from your footage, or any part of your footage.
+
+The processing is done **locally** and **stays on your computer**.
+  </Accordion>
+  <Accordion title="Does Jumper require an Internet connection?" >
+    Jumper only requires an Internet connection for **license verification**.
+
+Once your license key is verified, you can run everything offline - no Internet required.
+  </Accordion>
+  <Accordion title="What information is sent to Jumper's servers?" >
+    Jumper only requires an Internet connection for license verification.
+
+Once your license key is verified, you can run everything offline - no Internet required.
+
+Nothing related to you or your footage ever leaves your computer, apart from licensing information and crash reports.
+
+You can read our Privacy Policy [here](/privacy/).
+  </Accordion>
+  <Accordion title="What firewall settings do I need?" >
+    Jumper uses [Keygen](https://keygen.sh) for managing licenses, and therefore you should whitelist the `api.keygen.sh` domain in your firewall settings.
+  </Accordion>
+</AccordionGroup>
+
+
+## Storage & Files
+<AccordionGroup>
+  <Accordion title="Is any part of my footage uploaded during processing?">
+    No, we don’t upload the data processed from your footage, or any part of your footage.
+
+The processing is done **locally** and **stays on your computer**.
+  </Accordion>
+  <Accordion title="Does the analysis create any significant amount of data the disk?" >
+    When processing footage, Jumper generates Analysis files.
+
+The size of these Analysis files varies depending on a few factors like resolution and frame rate.
+
+As a rough guide, it's around **1MB for every 10 seconds** of footage.
+  </Accordion>
+  <Accordion title="Can I transfer the Analysis Files to another editor’s machine?" >
+    Yes, to transfer the Analysis Files on macOS:
+
+- Open the `Terminal.app` from Spotlight, and navigate to the cache directory:
+
+```
+open ~/Library/Application\ Support/
+```
+
+Then you can copy the `jumper-cache` folder to the same location on the other editor’s machine.
+  </Accordion>
+  <Accordion title="Will copying the cache overwrite existing files on the receiving machine?" >
+    No, copying the Analysis Files will be additive.
+
+It will not overwrite existing files but add to them.
+  </Accordion>
+  <Accordion title="Can I change the location of my Analysis Files folder?" >
+    Yes, you can change the location of your Analysis Files Folder under the `Settings` tab in Jumper.
+  </Accordion>
+  
+</AccordionGroup>
+
