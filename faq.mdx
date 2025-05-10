@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions"
-description: "Description of your new file."
+description: "Here are some of the most commonly asked questions."
 sidebarTitle: "FAQ"
 ---
 
@@ -21,13 +21,9 @@ sidebarTitle: "FAQ"
   <Accordion title="How does Jumper handle multi-channel audio?">
     Currently Jumper only processes audio from the first channel that has valid dialogue.
 
-In a future update, Jumper will process all audio channels.
+    In a future update, Jumper will process all audio channels.
   </Accordion>
 </AccordionGroup>
-
-
-
-
 
 ## Licensing & Account management
 
@@ -58,61 +54,59 @@ In a future update, Jumper will process all audio channels.
   <Accordion title="Is any part of my footage uploaded during processing?">
     No, we don’t upload the data processed from your footage, or any part of your footage.
 
-The processing is done **locally** and **stays on your computer**.
+    The processing is done **locally** and **stays on your computer**.
   </Accordion>
-  <Accordion title="Does Jumper require an Internet connection?" >
+  <Accordion title="Does Jumper require an Internet connection?">
     Jumper only requires an Internet connection for **license verification**.
 
-Once your license key is verified, you can run everything offline - no Internet required.
+    Once your license key is verified, you can run everything offline - no Internet required.
   </Accordion>
-  <Accordion title="What information is sent to Jumper's servers?" >
+  <Accordion title="What information is sent to Jumper's servers?">
     Jumper only requires an Internet connection for license verification.
 
-Once your license key is verified, you can run everything offline - no Internet required.
+    Once your license key is verified, you can run everything offline - no Internet required.
 
-Nothing related to you or your footage ever leaves your computer, apart from licensing information and crash reports.
+    Nothing related to you or your footage ever leaves your computer, apart from licensing information and crash reports.
 
-You can read our Privacy Policy [here](/privacy/).
+    You can read our Privacy Policy [here](/privacy/).
   </Accordion>
-  <Accordion title="What firewall settings do I need?" >
+  <Accordion title="What firewall settings do I need?">
     Jumper uses [Keygen](https://keygen.sh) for managing licenses, and therefore you should whitelist the `api.keygen.sh` domain in your firewall settings.
   </Accordion>
 </AccordionGroup>
 
-
 ## Storage & Files
+
 <AccordionGroup>
   <Accordion title="Is any part of my footage uploaded during processing?">
     No, we don’t upload the data processed from your footage, or any part of your footage.
 
-The processing is done **locally** and **stays on your computer**.
+    The processing is done **locally** and **stays on your computer**.
   </Accordion>
-  <Accordion title="Does the analysis create any significant amount of data the disk?" >
+  <Accordion title="Does the analysis create any significant amount of data the disk?">
     When processing footage, Jumper generates Analysis files.
 
-The size of these Analysis files varies depending on a few factors like resolution and frame rate.
+    The size of these Analysis files varies depending on a few factors like resolution and frame rate.
 
-As a rough guide, it's around **1MB for every 10 seconds** of footage.
+    As a rough guide, it's around **1MB for every 10 seconds** of footage.
   </Accordion>
-  <Accordion title="Can I transfer the Analysis Files to another editor’s machine?" >
+  <Accordion title="Can I transfer the Analysis Files to another editor’s machine?">
     Yes, to transfer the Analysis Files on macOS:
 
-- Open the `Terminal.app` from Spotlight, and navigate to the cache directory:
+    - Open the `Terminal.app` from Spotlight, and navigate to the cache directory:
 
-```
-open ~/Library/Application\ Support/
-```
+    ```
+    open ~/Library/Application\ Support/
+    ```
 
-Then you can copy the `jumper-cache` folder to the same location on the other editor’s machine.
+    Then you can copy the `jumper-cache` folder to the same location on the other editor’s machine.
   </Accordion>
-  <Accordion title="Will copying the cache overwrite existing files on the receiving machine?" >
+  <Accordion title="Will copying the cache overwrite existing files on the receiving machine?">
     No, copying the Analysis Files will be additive.
 
-It will not overwrite existing files but add to them.
+    It will not overwrite existing files but add to them.
   </Accordion>
-  <Accordion title="Can I change the location of my Analysis Files folder?" >
+  <Accordion title="Can I change the location of my Analysis Files folder?">
     Yes, you can change the location of your Analysis Files Folder under the `Settings` tab in Jumper.
   </Accordion>
-  
 </AccordionGroup>
-
