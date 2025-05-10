@@ -19,6 +19,39 @@ description: "Learn about the Search tab in Jumper"
 
     <Tabs>
       <Tab title="Premiere Pro">
+        <Card title="Match Source Monitor" horizontal="false">
+          Takes the frame currently visible in the Source Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Timeline Monitor" horizontal>
+          Takes the frame currently visible in the Timeline Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Pasteboard" horizontal>
+          Takes the image currently in your <Tooltip tip="">pasteboard</Tooltip> and performs a search with it.
+        </Card>
+      </Tab>
+      <Tab title="Final Cut Pro">
+        <Card title="Match Event Viewer" horizontal>
+          Takes the frame currently visible in the Source Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Timeline Viewer" horizontal>
+          Takes the frame currently visible in the Timeline Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Pasteboard" horizontal>
+          Takes the image currently in your <Tooltip tip="">pasteboard</Tooltip> and performs a search with it.
+        </Card>
+      </Tab>
+      <Tab title="Davinci Resolve">
+        <Card title="Match Source Monitor" horizontal>
+          Takes the frame currently visible in the Source Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Timeline Monitor" horizontal>
+          Takes the frame currently visible in the Timeline Monitor and performs a search with it.
+        </Card>
+        <Card title="Match Pasteboard" horizontal>
+          Takes the image currently in your <Tooltip tip="">pasteboard</Tooltip> and performs a search with it.
+        </Card>
+      </Tab>
+      <Tab title="Avid MC">
         <Card title="Match Source Monitor" horizontal>
           Takes the frame currently visible in the Source Monitor and performs a search with it.
         </Card>
@@ -33,6 +66,10 @@ description: "Learn about the Search tab in Jumper"
   </Step>
   <Step title="Search outside project">
     If switched on, Jumper will search in any analyzed media you have, even if its not in the currently open project.
+
+    Results from media outside of the current project has an amber background in the Result View.
+
+    ![SCR-20250510-qcxf.png](/images/SCR-20250510-qcxf.png)
   </Step>
 </Steps>
 
@@ -55,7 +92,10 @@ After performing a search, the results are shown in a grid below the search box.
 11. Add scene to timeline
 12. Find similar
 
-### Speech Search
+## Speech Search
+
+![SCR-20250510-qava.png](/images/SCR-20250510-qava.png)
+
 Switching to the Speech search, you can use the Search bar to search for any word or phrase. The matching results will be displayed below the search bar. Exact matches are highlighted in green.
 
 Clicking a result will open up the scene in the Source Monitor.
