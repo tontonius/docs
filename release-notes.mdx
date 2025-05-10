@@ -1,0 +1,459 @@
+---
+title: "Release notes"
+---
+
+<Update label="2025-04-07" description="Build 1682">
+  **🔨 Improvements**
+
+  - Cache size reduced by ~90% (100mb vs 1gb for same files)
+  - Robust cache reading with fallbacks, backward compatible with old method
+  - Support for vision models using MLX framework on Apple silicon
+  - Frame batch size calculation based on host machine specs (faster processing if you have more memory)
+  - Improved GPU memory cache handling when switching models
+  - Validate and delete invalid cache files
+
+  **🐞 Bug Fixes**
+
+  - Fix intermittent failures in reading and writing settings
+</Update>
+
+<Update label="2025-04-03" description="Build 1665">
+  **🔨 Improvements**
+
+  - Dynamically resolve batch size of video frames by host machine RAM/VRAM - will speed up analysis for those of you with more powerful machines
+  - A visual indicator will show if the search result is imported in the project or not - if it's not, the bottom left button of the thumbnail will locate the file on your filesystem in Finder of File Explorer
+  - Fix concurrency issues loading/unloading non-project media from Analysis folder
+  - Various small improvements to backend stability
+
+  **🐞 Bug Fixes**
+
+  - Fix missing start_timecode in metadata cache
+  - Fix R3D file processing with "V2 Multilingual x-high-res" model (did I tell you already this model is the really, really good?)
+  - Add default Premiere target a/v track offset to settings file creation
+</Update>
+
+<Update label="2025-03-30" description="Build 1637">
+  **🆕 Important Changes**
+
+  - **New AI model "V2 Multilingual x-high-res" added**
+  - This one is fantastic - increases accuracy on multilingual benchmarks by **50%** compared to our default V2 Medium model, while also showing excellent performance when using English searches. The downside is that analysis takes a bit longer on macOS - Windows users with Nvidia GPUs will process significantly faster.
+  - **You can now search all previously analysed footage inside your Analysis folder**
+  - Instead of being limited to only searching in your current project media, you can now toggle an option to search in all the media you have ever analysed. The media of search results can be located on your filesystem by clicking the lower-left button to "Show in filesystem", so you can import them into your project more easily. An automated "import to project" solution will be added in a future release.
+
+  **🔨 Improvements**
+
+  - Visual analysis processing speed increased for all models by optimising the frame extraction from videos (~30% speedup)
+  - More comprehensive permission handling (ensuring read/write permission for Analysis folder in multi-user environments)
+
+  **🐞 Bug Fixes**
+
+  - Fix missing default setting for timeline audio/video track target in Premiere
+</Update>
+
+<Update label="2025-03-10" description="Build 1620">
+  **🆕 Important Changes**
+
+  - **Update to V2 visual models**. We now use new AI model architectures that improves visual searches in a number of ways, and are multilingual by default. Read more here https://docs.getjumper.io/models/
+  - ⚠️
+  - You will need to re-process your footage - it will be fast and is highly recommended. If you still want to use the old model, download and load the **Medium** model instead of the new default **V2 Medium**.
+  - **Multilingual Support**:
+    - V2 models handle searches in any language, improving non-English text and concept recognition. V1 multilingual models (e.g., **Large multilingual**) may still excel in specific languages like Hindi or Thai.
+    - Jumper's interface is now translated into different languages - currently supporting **Japanese, Korean, Simplified Chinese, Brazilian Portuguese, and Swedish**.
+  - Analysis file sharing between different machines is available for paid licenses (e.g. put analysis folder on a shared location, like on a NAS)
+  - Optimised processing of the same footage to the same analysis folder by multiple machines at the same time (e.g. process the same footage from 10 individual editor machines concurrently)
+
+  **🔨 Improvements**
+
+  - As mentioned above, lots of improvements to visual searches - see https://docs.getjumper.io/models/
+  - Add onboarding flow and revamp About/Help section
+  - Faster visual processing speeds due to optimisations in open source dependencies
+
+  **🐞 Bug Fixes**
+
+  - Fix bug when selecting/deselecting all checkboxes for which files should be included in searches - thanks for reporting @Nicklas
+  - Fix bug when searching using copied Pasteboard image when saved in TIFF instead of PNG format - thanks for reporting @CharlesTeton
+  - Don't allow visual searches if no media has been processed visually yet (show warning/info text)
+</Update>
+
+<Update label="2025-02-21" description="Build 1561">
+  **🐞 Bug Fixes**
+
+  - Fix hover on thumbnail broken
+  - Fix CSS issues with download buttons
+  - Fix progress bar for download not appearing in PPro
+</Update>
+
+<Update label="2025-02-17" description="Build 1553">
+  **🆕 Important Changes**
+
+  - **Add ability to download and use multiple new bigger/better visual search models\!** Go to the "Settings" tab in Jumper to use the new selection of models. See https://docs.getjumper.io/models/ for more information
+  - Multilingual models provide **greatly** improved support for doing visual searches in non-English languages
+  - Remove ability for free trial licenses to share cache
+
+  **🔨 Improvements**
+
+  - Add improvements when performing analysis of same media on multiple computers to the same cache at the same time
+  - Optimise model integrity checks
+
+  **🐞 Bug Fixes**
+
+  - Fixes to model selection and download functionality
+  - Refresh media table on restart, thanks for reporting Charles Teton
+  - Fix excessive logging and huge log file creation, thanks for reporting Ryan Monteith
+  - Fix incorrectly showing a message saying "error parsing FCPXML"
+</Update>
+
+<Update label="2025-01-14" description="1510">
+  **🔨 Improvements**
+
+  - Improve communication with Premiere API (fix large projects getting stuck on "Loading imports, please wait...")
+  - Move playhead to end of newly added clip when using the "Overwrite" method to add search results from Jumper to the timeline
+  - Optimise metadata cache handling in the backend (faster load of media table)
+
+  **🐞 Bug Fixes**
+
+  - Fix bug with the file counter in GUI sometimes not updating
+</Update>
+
+<Update label="2025-01-07" description="1490">
+  **🐞 Bug Fixes**
+
+  - Fix issue in FCP where media table will not load upon restart if a source file is deleted from disk wile still being present in the loaded Libraries/Events
+  - Fix issues in Premiere related to modifying the frame rate interpretation of project media files, thanks for reporting Cyril\!
+</Update>
+
+<Update label="2024-12-30" description="1484">
+  **🆕 Important Changes**
+
+  - Add `.CRM` to supported file formats for audio processing
+
+  **🐞 Bug Fixes**
+
+  - Fix slow searches when using "Match Viewer frame" and "Match Event Viewer frame" in FCP. Thanks for reporting Steve Z\!
+  - Fix an issue in the internal messaging of the Jumper backend to trigger FCP actions
+</Update>
+
+<Update label="2024-12-19" description="1470">
+  **🆕 Important Changes**
+
+  - We now load whatever was in the Jumper media table in Final Cut Pro the next time you start Jumper, even if you restart FCP or your computer
+
+  **🐞 Bug Fixes**
+
+  - Fix issues parsing sync clip in FCPXML, thanks for reporting @FlorianDuffe and @SamPluemacher
+  - Fix issues related to Final Cut Pro preferences since the FCP11 update
+  - Fix issues related to timecode in FCP after macOS 15 Sequoia update
+</Update>
+
+<Update label="2024-12-09" description="1462">
+  **🆕 Important Changes**
+
+  - Add `.mts` to supported files, thanks for reporting @Blitz Bricks
+
+  **🔨 Improvements**
+
+  - Greatly improved accuracy when searching via source/program monitor using `mxf`, `r3d`, or `mpg` files
+
+  **🐞 Bug Fixes**
+
+  - Increase metadata cache read/write timeout period
+  - Don't always take first frame in source/program monitor search from `mxf`, `r3d`, `mpg` files
+</Update>
+
+<Update label="2024-12-05" description="1453">
+  **🆕 Important Changes**
+
+  - We now finally support **visual processing** of .R3D files\! To enable this feature, you need to go to [www.red.com/downloads](http://www.red.com/downloads) and download and install **REDCINE-X PRO**.
+  - We now save the transcriptions as plain text files in the audio analysis folder. The transcription can be found in the two .txt files if you right-click on a file in Jumper's media table and click "Reveal Audio analysis".
+
+  **🔨 Improvements**
+
+  - Improve frame capture quality when making reverse image searches via Final Cut Pro
+
+  **🐞 Bug Fixes**
+
+  - Prevent automatic shutdown of Jumper Engine if the Final Cut Pro Trial version is running.
+  - Make sure the settings for target audio and video track in Premiere Pro doesn't reset on restart, thanks for reporting @citizensam\!
+  - Make sure we are frame-accurate when doing reverse image searches from a Premiere Pro timeline, thanks for reporting @citizensam\!
+</Update>
+
+<Update label="2024-11-15" description="1420">
+  **🐞 Bug Fixes**
+
+  - Fixed FFmpeg audio extraction failing in some cases, thanks for reporting Tim Nolte\!
+  - Skip loading transcriptions for media that can't be found at a specified file path.
+</Update>
+
+<Update label="2024-11-12" description="1417">
+  **🆕 Important Changes**
+
+  - We've removed silence checks from the speech processing pipeline (for now, since it causes issues in some cases).
+  - If you have very long silent audio/video files, simply don't check the speech processing in the Media panel for these clips.
+
+  **🐞 Bug Fixes**
+
+  - Fixed issues with `.mxf` files having malformed timecode values.
+  - Error-safe parsing of `.caf` audio file metadata.
+  - We no longer ignore an audio file if there is some issue parsing the audio channel count.
+</Update>
+
+<Update label="2024-11-09" description="1414">
+  **🐞 Bug Fixes**
+
+  - Fixed slow search responses when working with footage on shared storage, such as a NAS or SAN. Thanks for reporting Siim\!
+  - Jumper now ignores non-media files from FCPXML.
+  - Reduced verbose error logging output for offline files.
+</Update>
+
+<Update label="2024-11-06" description="1406">
+  **🔨 Improvements**
+
+  - Updated the **Drag-and-drop your Libraries or Events here** icon. Thanks for suggesting Tyler Nelson\!
+  - Renamed **Load via file system** button to **Load via filesystem**.
+</Update>
+
+<Update label="2024-11-03" description="1403">
+  **🔨 Improvements**
+
+  - Adds `aiff`, `caf`, `sd2` and `mp2` to audio processing formats.
+  - Implements support for using different license keys in different NLEs at the same time.
+  - Removes auto-destruct date (we're live\!).
+  - Various user interface improvements for the Final Cut Pro Workflow Extension. Thanks Tyler Nelson\!
+
+  **🐞 Bug Fixes**
+
+  - Ensures all checkboxes are checked over multiple pages when using **Select All** in the Media panel.
+</Update>
+
+<Update label="2024-10-31" description="1379">
+  **🆕 Important Changes**
+
+  - Implemented additive handling for drag-and-dropped FCPXML data (not replacing previous data) in Final Cut Pro.
+  - We now automatically load previously loaded FCPXML data when re-starting the Final Cut Pro Workflow Extension.
+  - Added a button to **Clear Table** in the Jumper Final Cut Pro Workflow Extension's Media panel.
+  - Added a button to **Load via file system** in the Jumper Final Cut Pro Workflow Extension's Media panel. This allows Jumper to scan the Library at the file system level, the way we previously used to in earlier versions.
+
+  **🔨 Improvements**
+
+  - Enhanced cache handling to re-parse the cache status of files on reload for more accurate data representation.
+  - Improved error handling in the FCPXML parser.
+  - The Jumper Workflow Extension now correctly handles both dropped Libraries from Final Cut Pro and `.fcpxml` files from Finder.
+
+  **🐞 Bug Fixes**
+
+  - Resolved a license hint display issue that occurred after restarting the frontend when already authenticated.
+</Update>
+
+<Update label="2024-10-31" description="1369">
+  **🔨 Improvements**
+
+  - We now pass Event & Library from FCPXML to all calls to the Final Cut Pro Automation Engine.
+  - We now parse the Media Names from the FCPXML and pass these names along to the Final Cut Pro Automation Engine.
+  - You can now still drag-and-drop Libraries and Events from Final Cut Pro when in unlicensed mode.
+
+  **🐞 Bug Fixes**
+
+  - Fixed an "index out of bounds" error, when failing to parse an Event or Library in FCPXML.
+  - Fixed a bug in the Metadata Cache update.
+</Update>
+
+<Update label="2024-10-30" description="1364">
+  **🆕 Important Changes**
+
+  - We've done major changes to how the Media panel works in Final Cut Pro.
+  - Rather than automagically loading all the media from your Library, you now just drag in the Library or Event(s) you want to work with.
+  - This makes managing clips in the Media panel a lot easier, as you can just bring in the rushes you want to work with in Jumper, leaving out all the graphics, sound effects and music you might already have in your Library.
+
+  **🔨 Improvements**
+
+  - Better visibility of how many clips you have left to process whilst using a free trial license.
+
+  **🐞 Bug Fixes**
+
+  - Fixed a bug related to changing the Analysis folder.
+  - Fixed duplicate thumbnails loading within the Jumper interface.
+</Update>
+
+<Update label="2024-10-28" description="1348">
+  **🐞 Bug Fixes**
+
+  - Jumper no longer attempts to process files that have been deleted from disk after Jumper has first seen them.
+</Update>
+
+<Update label="2024-10-28" description="1345">
+  **🔨 Improvements**
+
+  - Now when you click on the **Update** button on Mac and Windows is prompts to download the latest Jumper update.
+
+  **🐞 Bug Fix**
+
+  - Fixed bug which caused the Jumper Adobe Premiere Pro Extension to fail to load.
+  - Jumper no longer attempts to transcribe silent audio files.
+</Update>
+
+<Update label="2024-10-27" description="1323">
+  **🆕 Important Changes**
+
+  - We've re-enabled Sentry for crash reporting. We use Sentry to collect information about crashes and bugs in Jumper. Crash Data is uploaded securely to the Sentry servers. You can learn more in our privacy policy.
+</Update>
+
+<Update label="2024-10-25" description="1273">
+  **🐞 Bug Fix**
+
+  - Fix memory leak issue when parsing corrupted `WAV` file. HUGE thank you to Sebastián Nuño for helping out debugging this\!
+</Update>
+
+<Update label="2024-10-24" description="1257">
+  **🐞 Bug Fixes**
+
+  - Fixed bugs in license flow. Thanks for reporting Art Bell\!
+  - Fixed bug where pressing the buy button in Final Cut Pro didn't do anything. Thanks for reporting Felipe Baez & Iain Anderson\!
+  - Fixed bug where changing the Analysis Folder in the Settings Panel in Jumper didn't persist between reloads.
+</Update>
+
+<Update label="2024-10-23" description="1237">
+  **🆕 Important Changes**
+
+  - Jumper on macOS is now code-signed by Witchcraft Software AB.
+  - Because of this change in code signature, Mac users may have to re-grant Accessibility Permission. We recommend doing a fresh uninstall and reinstall. All future builds will be code-signed by Witchcraft Software AB, so you'll only have to do this once.
+  - Jumper now runs on Intel Mac's. Currently we have seperate binaries for Intel and Apple Silicon, whilst we explore building a Universal binary.
+
+  **🔨 Improvements**
+
+  - We have implemented offline license checking for valid non-trial licenses. This means you can now work entirely offline, once the license is initially validated.
+  - When you drag-and-drop a Final Cut Pro Library to the Jumper Media table, we now save this information in the metadata cache, so it's persistent across restarts.
+  - We now shut down the Jumper Engine after a certain period of time if Adobe Premiere and Final Cut Pro are closed.
+
+  **🐞 Bug Fixes**
+
+  - Fixed a memory leak when transcribing long audio files.
+  - Fixed a bug when an Analysis folder contains non-ASCII characters. Thanks for reporting Sebastián Nuño\!
+  - Fixed parsing of drop-frame timecode, where the timecode string contains semi-colons.
+  - Fixed a race-condition when clicking **Apply** after entering a new license key.
+</Update>
+
+<Update label="2024-10-18" description="1090">
+  **🔨 Improvements**
+
+  - Implemented support for metered trial licenses, giving 30 free searches. These have no expiration date, and allows for one trial license allowed per unique machine.
+  - Added support for Adobe Premiere 2025 and Adobe Premiere 2025 beta to `Jumper.app` on Mac. Thanks for reporting Jari Innanen\!
+  - We now automatically uncollapse the Final Cut Pro permissions in `Jumper.app` if Final Cut Pro is enabled and installed, and one of those permissions is not yet granted.
+
+  **🐞 Bug Fixes**
+
+  - Fixes to Multicam and Synchronised Clip timecode problems in Final Cut Pro. Thanks for reporing Sam Pluemacher\!
+  - Ensure that license key and chosen Analysis directory are shown in the UI and not lost when restarting Jumper. Thanks for reporting Sam Pluemacher\!
+</Update>
+
+<Update label="2024-10-17" description="1080">
+  **🆕 Important Changes**
+
+  - Your previous/existing license key will no longer work with this build\! It will continue to work with older versions.
+  - We have switched over to our new licensing system, that's tied into our payments system. You will need to get a new license. Please visit [getjumper.io](https://getjumper.io) and "buy" either a Subscription or Lifetime license for Final Cut Pro and/or Adobe Premiere. Bundles on the website are currently not hooked up. Use the dummy credit card number `4000 0566 5566 5556` and CVC `100` - you cannot use a real credit card. You will get an email with your new license key. Please report any bugs or issues\! Thanks team\!
+  - This build will self-destruct on 30th October 2024.
+
+  **🔨 Improvements**
+
+  - The hero `Jumper.app` application on macOS has been redesigned. You now must now manually enable the NLE's you want to use.
+  - Renamed `Switch to Manage Tab` shortcut label to `Switch to Media Tab`. Thanks for reporting RevortA\!
+  - Various under-the-hood improvements to the Jumper Engine related to licensing.
+</Update>
+
+<Update label="2024-10-10" description="1031">
+  **🔨 Improvements**
+
+  - Added support for Broadcast WAVE (`.bwf`) files.
+
+  **🐞 Bug Fixes**
+
+  - Fixed a UTF-8 decode error when checking audio channel of file. Thanks for reporting Jari Innanen\!
+  - Fixed Multicam navigation, Mark In, Mark Out and Add to Timeline in Adobe Premiere on Mac & Windows.
+  - Fixed source clip to Multicam mapping for Adobe Premiere on Windows.
+  - Fixed timecode parsing of audio files.
+</Update>
+
+<Update label="2024-10-07" description="986">
+  **🔨 Improvements**
+
+  - Major speed improvements for audio processing on macOS in Final Cut Pro and Adobe Premiere\! 🥳
+  - The **Open Jumper Documentation** and **Join our Discord** buttons in the **About** panel in Final Cut Pro now work.
+</Update>
+
+<Update label="2024-10-04" description="949">
+  **🐞 Bug Fixes**
+
+  - Fixed a regression created in Jumper 2024.10.03 (Build 943) where we broke the right-click contextual menu in the Media Table in Final Cut Pro. This was just a timing error in our build script, which is why we also had the weird version numbers.
+  - Fixed auto-detection of language in transcription when using WhisperKit.
+  - Various under-the-hood improvements with the WhisperKit Engine.
+</Update>
+
+<Update label="2024-10-03" description="943">
+  **🔨 Improvements**
+
+  - Processed clips are now automatically included in Jumper's searches once analysis is completed on Premiere on Windows and Mac. Thanks for your patience on this one\!
+  - Improved handling of filenames with usual characters on both Mac and Windows.
+  - Mark In/Out in Premiere is now working better with Multicam Clips.
+  - Minor user interface improvements to tooltips on Mac and Windows.
+  - Shortcut keys have been updated on Premiere on Windows. This is still an experimental work-in-progress, so feedback welcome\!
+  - Jumper will now always add at least one second of results to the timeline. Previously there were strange cases where a single frame clip could be added to the timeline from Jumper. This is now fixed\!
+  - Various under-the-hood improvements with the Jumper Engine and audio transcriptions.
+</Update>
+
+<Update label="2024-10-01" description="921">
+  **🆕 Important Changes**
+
+  - This build will self-destruct on 20th October 2024.
+
+  **🔨 Improvements**
+
+  - Fixed a regression that broke multi-lingual audio transcription due to a change in Whisper models. Thanks for reporting Jari Innanen\!
+  - Various under-the-hood improvements to our WhisperKit implementation on macOS. Thanks for everyone's feedback\!
+  - Various under-the-hood improvements to the Jumper Engine on both Mac and Windows.
+</Update>
+
+<Update label="2024-09-29" description="910">
+  **🆕 Important Changes**
+
+  - We've updated the EULA and copyright messages to reference our new company name, **Witchcraft Software AB**.
+
+  **🔨 Improvements**
+
+  - Added **experimental** support for new CoreML/Neural Engine-based audio transcription. This should dramatically improve transcription speeds on Apple Silicon Mac's. This new technique takes about 9 minutes to initialise the CoreML caches on first install, so we continue to use the older technique until the new CoreML caches are ready.
+  - You can now right-click on clips in the **Media** panel to reveal their cache location in Finder. This is useful if you need to delete an Analysis file if you processed in the wrong language, etc.
+  - We've changed the default shortcut key for **Match Pasteboard Frame** from `CMD+V` to `CMD+P`.
+  - Added a button to **Paste** the license key in the **Settings** panel.
+  - Improved how the interface works on smaller windows in Final Cut Pro and Adobe Premiere.
+  - Various under-the-hood improvements related to authentication.
+
+  **🐞 Bug Fixes**
+
+  - The correct Multicam angle should now be selected when matching back to a Multicam clip after dragging in an Event from the Final Cut Pro Browser.
+  - Fixed timecode parsing of audio files for Multicam & Sync Clips in Final Cut Pro after dragging in an Event from the Final Cut Pro Browser.
+</Update>
+
+<Update label="2024-09-28" description="894">
+  **🔨 Improvements**
+
+  - Added **experimental** shortcut key support in the Final Cut Pro Workflow Extension and Adobe Premiere Extension. This is still very much a work-in-progress. Feedback welcome\!
+</Update>
+
+<Update label="2024-09-27" description="889">
+  **🔨 Improvements**
+
+  - Improvements to the **experimental** support for Multicam and Synchronised Clips in Final Cut Pro. This is still very much a work-in-progress. After processing the clips you want to use in the Jumper Media panel, drag-and-drop a Library or Event from the Final Cut Pro Browser into the Jumper Media panel in the Workflow Extension. You should see a "FCPXML processed successfully" message. We will use the information in the dragged FCPXML to prioritise Multicam Clips and Synchronised Clips over standard clips. There is currently a bug with selecting the right angle in some cases.
+  - Removed Sentry crash reporting from `Jumper.app` and the Final Cut Pro Automation Engine. If you experience any crashes, you'll need to manually send us your crash reports from the `~/Library/Logs/DiagnosticReports` folder.
+</Update>
+
+<Update label="2024-09-25" description="867">
+  **🔨 Improvements**
+
+  - Added **experimental** support for Multicam and Synchronised Clips in Final Cut Pro. This is still very much a work-in-progress. After processing the clips you want to use in the Jumper Media panel, drag-and-drop a Library or Event from the Final Cut Pro Browser into the Jumper Media panel in the Workflow Extension. You should see a "FCPXML processed successfully" message. We will use the information in the dragged FCPXML to prioritise Multicam Clips and Synchronised Clips over standard clips. Currently this feature works best if the Multicam starting timecode is `00:00:00:00` - this will be improved in a future beta.
+  - Under-the-hood performance improvements for Premiere on Mac and Windows.
+
+  **🐞 Bug Fix**
+
+  - Fixed a potential crash on the launch of <code>
+      Jumper.app
+    </code>
+     caused by Sentry, which we use for crash reporting on macOS.
+</Update>
