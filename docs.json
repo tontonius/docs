@@ -49,7 +49,9 @@
               "common-issues/select-media-before"
             ]
           }
-        ],
+        ]
+      },
+      {
         "tab": "About",
         "groups": [
           {
@@ -72,10 +74,10 @@
           {
             "group": "Legal & Policies",
             "pages": [
-              "core-concepts/processing",
-              "core-concepts/visual-search",
-              "core-concepts/speech-search",
-              "core-concepts/machine-learning"
+              "about/eula",
+              "about/privacy",
+              "about/refund"
+              
               
             ]
           },
