@@ -46,7 +46,8 @@
           {
             "group": "Common issues",
             "pages": [
-              "common-issues/select-media-before"
+              "common-issues/select-media-before",
+              "common-issues/panel-not-opening"
             ]
           }
         ]
