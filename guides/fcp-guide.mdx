@@ -148,7 +148,10 @@ Due to technical limitations in FCP's native API, Jumper needs to use macOS's bu
   </Step>
 </Steps>
 
-## Accessibility Permission
+
+## About the permissions
+
+### Accessibility Permission
 
 Jumper requires Accessibility Permission to trigger commands and menu bar items in Final Cut Pro through macOS's built-in Accessibility Automation.
 
@@ -156,7 +159,7 @@ This is only required for Final Cut Pro - it is not required if you're only usin
 
 We use the Accessibility API to programatically "click" on buttons and menu bar items - similar to how Automator, Keyboard Maestro, BetterTouchTool, etc. works.
 
-## Screen Recording Permission
+### Screen Recording Permission
 
 Jumper requires the Screen Recording permission to detect things on your screen when using Final Cut Pro.
 
@@ -182,7 +185,7 @@ Lots of other applications like Bartender and BetterTouchTool have this same lim
 
 We use the same techniques as the totally open-source CommandPost, so you can always inspect their code to see what's going on.
 
-## Full Disk Access Permission
+### Full Disk Access Permission
 
 Jumper requires Full Disk Access to read Final Cut Pro's Preferences File (~/Library/Preferences/com.apple.FinalCut.plist) and the current Final Cut Pro Command Set.
 
